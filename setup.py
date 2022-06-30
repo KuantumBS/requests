@@ -59,17 +59,17 @@ if sys.argv[-1] == "publish":
     sys.exit()
 
 requires = [
-    "charset_normalizer>=2,<3",
-    "idna>=2.5,<4",
-    "urllib3>=1.21.1,<1.27",
+    "charset_normalizer>=2",
+    "idna>=2.5",
+    "urllib3>=1.21.1",
     "certifi>=2017.4.17",
 ]
 test_requirements = [
-    "pytest-httpbin==0.0.7",
+    "pytest-httpbin>=0.0.7",
     "pytest-cov",
     "pytest-mock",
     "pytest-xdist",
-    "PySocks>=1.5.6, !=1.5.7",
+    "PySocks>=1.5.6",
     "pytest>=3",
 ]
 
@@ -94,7 +94,7 @@ setup(
     package_data={"": ["LICENSE", "NOTICE"]},
     package_dir={"requests": "requests"},
     include_package_data=True,
-    python_requires=">=3.7, <4",
+    python_requires=">=3.7",
     install_requires=requires,
     license=about["__license__"],
     zip_safe=False,
@@ -122,8 +122,8 @@ setup(
     tests_require=test_requirements,
     extras_require={
         "security": [],
-        "socks": ["PySocks>=1.5.6, !=1.5.7"],
-        "use_chardet_on_py3": ["chardet>=3.0.2,<6"],
+        "socks": ["PySocks>=1.5.6"],
+        "use_chardet_on_py3": ["chardet>=3.0.2"],
     },
     project_urls={
         "Documentation": "https://requests.readthedocs.io",
